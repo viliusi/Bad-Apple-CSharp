@@ -1,4 +1,4 @@
-# Bad-Apple-C-
+# Bad-Apple-CSharp
 This is my attempt at making the touhou music video Bad Aple in the C# console
 
 For now I think it's ok, but I want to change to a higher rip of the ascii art, I have all the frames as PNG, so my next goal will be converting that too ASCII art and setting it up in a similar manner as the current ascii rip.

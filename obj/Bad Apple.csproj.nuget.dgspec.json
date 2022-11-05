@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/vilius/Desktop/Bad Apple/Bad Apple.csproj": {}
+    "/home/vilius/Documents/C# Projects/Bad-Apple-CSharp/Bad Apple.csproj": {}
   },
   "projects": {
-    "/home/vilius/Desktop/Bad Apple/Bad Apple.csproj": {
+    "/home/vilius/Documents/C# Projects/Bad-Apple-CSharp/Bad Apple.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/vilius/Desktop/Bad Apple/Bad Apple.csproj",
+        "projectUniqueName": "/home/vilius/Documents/C# Projects/Bad-Apple-CSharp/Bad Apple.csproj",
         "projectName": "Bad Apple",
-        "projectPath": "/home/vilius/Desktop/Bad Apple/Bad Apple.csproj",
+        "projectPath": "/home/vilius/Documents/C# Projects/Bad-Apple-CSharp/Bad Apple.csproj",
         "packagesPath": "/home/vilius/.nuget/packages/",
-        "outputPath": "/home/vilius/Desktop/Bad Apple/obj/",
+        "outputPath": "/home/vilius/Documents/C# Projects/Bad-Apple-CSharp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/vilius/.nuget/NuGet/NuGet.Config"

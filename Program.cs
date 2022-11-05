@@ -2,17 +2,21 @@
 {
     private static void Main(string[] args)
     {
+        /*Don't mind me, just doing some codey stuff, for me it took quite a while to be able to refer to the project location.
+        The only reason I did it this way, is because I work on both Windows and Linux, over multiple computers, which means this will make it easier.*/
+        Directory.SetCurrentDirectory(AppDomain.CurrentDomain.BaseDirectory);
+        String debug = Directory.GetCurrentDirectory();
+        String allFrames = debug.Remove(debug.Length-17) + "/allFrames.txt";
         //Since the video is encoded in black on white, we need to set our console to that too.
         Console.BackgroundColor = ConsoleColor.White;
         Console.ForegroundColor = ConsoleColor.Black;
-
         //We start by making a try catch. Why? Because that's what the example online did.
         string line;
         try
         {
             //Pass the file path and file name to the StreamReader constructor.
             //Again thank you too Chion82, his project is linked in the ReadME.
-            StreamReader sr = new StreamReader(@"/home/vilius/Desktop/Bad Apple/allFrames.txt");
+            StreamReader sr = new StreamReader(allFrames);
             //We start by reading the first line, again example did so.
             line = sr.ReadLine();
 
@@ -55,6 +59,7 @@
         }
         finally
         {
+            //yay
             Console.WriteLine("Hope you enjoyed the work, while I myself didn't do too much of the work, I'm still proud of what I achieved :)");
         }
     }

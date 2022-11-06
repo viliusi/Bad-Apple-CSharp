@@ -48,7 +48,7 @@
                 {
                     case true:
                         Thread.Sleep(100);
-                        Console.Clear();
+                        Console.SetCursorPosition(0, 0);
                         break;
                     case false:
                         break;

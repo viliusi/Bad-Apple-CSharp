@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ivano\\Documents\\CSharp projects\\Bad-Apple-CSharp\\Bad Apple.csproj": {}
+    "/home/vilius/Documents/C# Projects/Bad-Apple-CSharp/Bad Apple.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ivano\\Documents\\CSharp projects\\Bad-Apple-CSharp\\Bad Apple.csproj": {
+    "/home/vilius/Documents/C# Projects/Bad-Apple-CSharp/Bad Apple.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ivano\\Documents\\CSharp projects\\Bad-Apple-CSharp\\Bad Apple.csproj",
+        "projectUniqueName": "/home/vilius/Documents/C# Projects/Bad-Apple-CSharp/Bad Apple.csproj",
         "projectName": "Bad Apple",
-        "projectPath": "C:\\Users\\ivano\\Documents\\CSharp projects\\Bad-Apple-CSharp\\Bad Apple.csproj",
-        "packagesPath": "C:\\Users\\ivano\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ivano\\Documents\\CSharp projects\\Bad-Apple-CSharp\\obj\\",
+        "projectPath": "/home/vilius/Documents/C# Projects/Bad-Apple-CSharp/Bad Apple.csproj",
+        "packagesPath": "/home/vilius/.nuget/packages/",
+        "outputPath": "/home/vilius/Documents/C# Projects/Bad-Apple-CSharp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ivano\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/vilius/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -43,8 +43,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -53,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/dotnet6-6.0.110/sdk/6.0.110/RuntimeIdentifierGraph.json"
         }
       }
     }

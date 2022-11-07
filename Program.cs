@@ -64,6 +64,7 @@
         {
             //yay
             Console.WriteLine("Hope you enjoyed the work, while I myself didn't do too much of the work, I'm still proud of what I achieved :)");
+            Console.ReadKey();
         }
     }
 }

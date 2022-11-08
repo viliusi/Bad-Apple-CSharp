@@ -1,7 +1,24 @@
 ﻿internal class Program
 {
+    public static void RemoveEmptySpace()
+    {
+        List<string> file = File.ReadAllLines("allFrames.txt").ToList();
+
+        int NormalLineL = file[0].Length;
+        for (int i = 0; i < file.Count(); i++)
+        {
+            for (int j = file[i].Length; j < NormalLineL; j++)
+            {
+                file[i] += ' ';
+            }
+        }
+
+        File.WriteAllLines("allFrames.txt", file);
+    } 
+
     private static void Main(string[] args)
     {
+        RemoveEmptySpace();
         /*Don't mind me, just doing some codey stuff, for me it took quite a while to be able to refer to the project location.
         The only reason I did it this way, is because I work on both Windows and Linux, over multiple computers, which means this will make it easier.*/
         Directory.SetCurrentDirectory(AppDomain.CurrentDomain.BaseDirectory);
@@ -28,12 +45,12 @@
             //Cool while loop, as long as the line we are trying to read is valid, we can continue to render frames.
             while (line != null)
             {
-                //The switch case here just checks for if the current line has an S in it, since S is what we use to identify where the "frames" split.
+                //The switch case here just checks for if the current line has an SPLIT in it, since SPLIT is what we use to identify where the "frames" split.
                 switch (line)
                 {
-                    case var containsS when line.Contains("SKIP"):
+                    case var containsS when line.Contains("SPLIT"):
                         skip = true;
-                        //This makes it so we can skip the line with SKIP in it, then it looks a bit better :)
+                        //This makes it so we can skip the line with SPLIT in it, then it looks a bit better :)
                         line = sr.ReadLine();
                         line = sr.ReadLine();
                         break;
@@ -50,7 +67,7 @@
                 switch (skip)
                 {
                     case true:
-                        Thread.Sleep(100);
+                        Thread.Sleep(50);
                         Console.SetCursorPosition(0, 0);
                         break;
                     case false:

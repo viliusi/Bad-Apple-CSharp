@@ -1,24 +1,7 @@
 ﻿internal class Program
 {
-    public static void RemoveEmptySpace()
-    {
-        List<string> file = File.ReadAllLines("allFrames.txt").ToList();
-
-        int NormalLineL = file[0].Length;
-        for (int i = 0; i < file.Count(); i++)
-        {
-            for (int j = file[i].Length; j < NormalLineL; j++)
-            {
-                file[i] += ' ';
-            }
-        }
-
-        File.WriteAllLines("allFrames.txt", file);
-    } 
-
     private static void Main(string[] args)
     {
-        RemoveEmptySpace();
         /*Don't mind me, just doing some codey stuff, for me it took quite a while to be able to refer to the project location.
         The only reason I did it this way, is because I work on both Windows and Linux, over multiple computers, which means this will make it easier.*/
         Directory.SetCurrentDirectory(AppDomain.CurrentDomain.BaseDirectory);

@@ -1,11 +1,38 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "NetCoreAudio/1.7.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/NetCoreAudio.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetCoreAudio.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "NetCoreAudio/1.7.0": {
+      "sha512": "5pFxP/gwY31QVTVoh+3QhnenyHiP5uyPEy/vG6MArmTqdnZc8mMxwMWemsoRKMNGcC/o3/lW/H/YBX9dgZy/nA==",
+      "type": "package",
+      "path": "netcoreaudio/1.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "icon.jpg",
+        "lib/netstandard2.0/NetCoreAudio.dll",
+        "netcoreaudio.1.7.0.nupkg.sha512",
+        "netcoreaudio.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "NetCoreAudio >= 1.7.0"
+    ]
   },
   "packageFolders": {
     "/home/vilius/.nuget/packages/": {}
@@ -43,6 +70,12 @@
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
+        "dependencies": {
+          "NetCoreAudio": {
+            "target": "Package",
+            "version": "[1.7.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

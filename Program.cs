@@ -39,6 +39,8 @@
                         //This makes it so we can split the line with SPLIT in it, then it looks a bit better :)
                         line = sr.ReadLine();
                         line = sr.ReadLine();
+                        /* This is where I'd put my code that reads beep frequencies from a txt document and plays them through the beep command,
+                        but for some reason microsoft (ew) doesn't support beep with frequencies on linux, which is very not cool, if you ask me */
                         break;
                     default:
                         split = false;

@@ -21,9 +21,12 @@
             //We start by reading the first line, again example did so.
             line = sr.ReadLine();
 
-            /*Finally some original code, though it may not be as optimized, we make a boolean called skip, 
+            /*Finally some original code, though it may not be as optimized, we make a boolean called split, 
             if it gets set to true, we get to wait, then clear the screen, which is how we "render" frames. */
-            bool skip;
+            bool split;
+
+            //Setting up a list, to load the current frame, instead of just writing it from the streamreader
+            List<string> currentFrame = new List<string>();
 
             //Cool while loop, as long as the line we are trying to read is valid, we can continue to render frames.
             while (line != null)
@@ -31,25 +34,29 @@
                 //The switch case here just checks for if the current line has an SPLIT in it, since SPLIT is what we use to identify where the "frames" split.
                 switch (line)
                 {
-                    case var containsS when line.Contains("SPLIT"):
-                        skip = true;
-                        //This makes it so we can skip the line with SPLIT in it, then it looks a bit better :)
+                    case var containsSplit when line.Contains("SPLIT"):
+                        split = true;
+                        //This makes it so we can split the line with SPLIT in it, then it looks a bit better :)
                         line = sr.ReadLine();
                         line = sr.ReadLine();
                         break;
                     default:
-                        skip = false;
+                        split = false;
                         //This is again a code segment from Microsoft, what it does is print our "line" then it jumps to the next one, a bit like a type writer.
-                        Console.WriteLine(line);
+                        currentFrame.Add(line);
                         line = sr.ReadLine();
                         break;
                 }
 
-                /*And here we again have our skip feature, if an S was found, and skip was initiated, 
+                /*And here we again have our split feature, if an S was found, and split was initiated, 
                 then this will let us wait for enough time to emulate a frame, and run the code */
-                switch (skip)
+                switch (split)
                 {
                     case true:
+                        //Here we print the entire list, and clear it for future use
+                        currentFrame.ForEach(i=> Console.Write("{0}\n", i));
+                        currentFrame.Clear();
+                        //This sleeps the process and gets ready to print a new frame, to simulate frametimes
                         Thread.Sleep(50);
                         Console.SetCursorPosition(0, 0);
                         break;
@@ -62,6 +69,9 @@
         }
         finally
         {
+            //Setting up for a dramatic end
+            Console.Clear();
+            Console.SetCursorPosition(0, 0);
             //yay
             Console.WriteLine("Hope you enjoyed the work, while I myself didn't do too much of the work, I'm still proud of what I achieved :)");
             Console.ReadKey();

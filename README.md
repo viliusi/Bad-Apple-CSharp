@@ -6,7 +6,7 @@ For now I think it's ok, but I want to change to a higher rip of the ascii art, 
 Also thanks to Chion82 and his project with doing this in Python, I made good use of his data, to set it up C#, though I didn't look at how he coded his, instead I just did mine out of what I thought would work.
 https://github.com/Chion82/ASCII_bad_apple
 
-Things to implement:
+##Things to implement
 Music (oh god why)
 Music
 Music

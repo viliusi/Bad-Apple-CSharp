@@ -1,63 +1,36 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {
-      "NetCoreAudio/1.7.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/NetCoreAudio.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/NetCoreAudio.dll": {}
-        }
-      }
-    }
+    "net7.0": {}
   },
-  "libraries": {
-    "NetCoreAudio/1.7.0": {
-      "sha512": "5pFxP/gwY31QVTVoh+3QhnenyHiP5uyPEy/vG6MArmTqdnZc8mMxwMWemsoRKMNGcC/o3/lW/H/YBX9dgZy/nA==",
-      "type": "package",
-      "path": "netcoreaudio/1.7.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
-        "icon.jpg",
-        "lib/netstandard2.0/NetCoreAudio.dll",
-        "netcoreaudio.1.7.0.nupkg.sha512",
-        "netcoreaudio.nuspec"
-      ]
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    "net6.0": [
-      "NetCoreAudio >= 1.7.0"
-    ]
+    "net7.0": []
   },
   "packageFolders": {
-    "/home/vilius/.nuget/packages/": {}
+    "C:\\Users\\ivano\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/vilius/Documents/C# Projects/Bad-Apple-CSharp/Bad Apple.csproj",
-      "projectName": "Bad Apple",
-      "projectPath": "/home/vilius/Documents/C# Projects/Bad-Apple-CSharp/Bad Apple.csproj",
-      "packagesPath": "/home/vilius/.nuget/packages/",
-      "outputPath": "/home/vilius/Documents/C# Projects/Bad-Apple-CSharp/obj/",
+      "projectUniqueName": "C:\\Users\\ivano\\Documents\\CSharp projects\\Bad-Apple-CSharp\\Bad-Apple-CSharp.csproj",
+      "projectName": "Bad-Apple-CSharp",
+      "projectPath": "C:\\Users\\ivano\\Documents\\CSharp projects\\Bad-Apple-CSharp\\Bad-Apple-CSharp.csproj",
+      "packagesPath": "C:\\Users\\ivano\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ivano\\Documents\\CSharp projects\\Bad-Apple-CSharp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/vilius/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\ivano\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "net6.0"
+        "net7.0"
       ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "projectReferences": {}
         }
       },
@@ -68,21 +41,16 @@
       }
     },
     "frameworks": {
-      "net6.0": {
-        "targetAlias": "net6.0",
-        "dependencies": {
-          "NetCoreAudio": {
-            "target": "Package",
-            "version": "[1.7.0, )"
-          }
-        },
+      "net7.0": {
+        "targetAlias": "net7.0",
         "imports": [
           "net461",
           "net462",
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -91,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/dotnet6-6.0.110/sdk/6.0.110/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

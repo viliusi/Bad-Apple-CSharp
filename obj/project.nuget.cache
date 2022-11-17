@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Yx3CCLhFyJcv1Ud29w279FVRfgdsJU/nfFt7IPfTivd2CR96nIAmRc0ncjQdiRMh9PYBZi6MHNqkk59AcT6PpQ==",
+  "dgSpecHash": "7tEssWwoQuUDk45Pj5mWKp0S7+gz4Rk+/CbxTDoAWmmKXGexvPIejuKDwI69kz1bPkHL7EIPUU+APr6CIyovYA==",
   "success": true,
-  "projectFilePath": "/home/vilius/Documents/C# Projects/Bad-Apple-CSharp/Bad Apple.csproj",
-  "expectedPackageFiles": [
-    "/home/vilius/.nuget/packages/netcoreaudio/1.7.0/netcoreaudio.1.7.0.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\ivano\\Documents\\CSharp projects\\Bad-Apple-CSharp\\Bad-Apple-CSharp.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

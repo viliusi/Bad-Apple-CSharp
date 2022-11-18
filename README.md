@@ -16,3 +16,4 @@ Things to implement
 6. Music
 7. Chart explaining how far removed from reality this project is, from my point of view. (Shows the use of python, midi files, midi converters and multiple threads of music, hopefully)
 8. Oh yeah and if music isn't bad enough, then how about we multi-thread that stuff, I'm dead
+9. Simplify the beep script, should be able to be reduced greatly

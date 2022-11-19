@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ivano\\Documents\\CSharp projects\\Bad-Apple-CSharp\\Bad-Apple-CSharp.csproj",
+      "projectUniqueName": "c:\\Users\\ivano\\Documents\\CSharp projects\\Bad-Apple-CSharp\\Bad-Apple-CSharp.csproj",
       "projectName": "Bad-Apple-CSharp",
-      "projectPath": "C:\\Users\\ivano\\Documents\\CSharp projects\\Bad-Apple-CSharp\\Bad-Apple-CSharp.csproj",
+      "projectPath": "c:\\Users\\ivano\\Documents\\CSharp projects\\Bad-Apple-CSharp\\Bad-Apple-CSharp.csproj",
       "packagesPath": "C:\\Users\\ivano\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ivano\\Documents\\CSharp projects\\Bad-Apple-CSharp\\obj\\",
+      "outputPath": "c:\\Users\\ivano\\Documents\\CSharp projects\\Bad-Apple-CSharp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ivano\\AppData\\Roaming\\NuGet\\NuGet.Config"

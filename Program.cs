@@ -11,11 +11,13 @@
 
         //Another thread for ascii art
         Thread asciiThread = new Thread(ascii);
+        asciiThread.Name = "Ascii Art";
         asciiThread.Start();
 
         /*And we make a second thread, for the beeps, would have set up more threads for beeps, 
         but C# only ever allows you to run one beep at a time, otherwise they start fighting for priority*/
         Thread musicThread = new Thread(beeps);
+        musicThread.Name = "Beeps";
         musicThread.Start();
     }
     static void ascii()
@@ -105,14 +107,11 @@
             String debug = Directory.GetCurrentDirectory();
             String musicLocation = debug.Remove(debug.Length - 17) + "/music.txt";
             StreamReader musicFreq = new StreamReader(musicLocation);
-            string freq;
-            freq = musicFreq.ReadLine();
+            string freq = musicFreq.ReadLine();
 
             //This loop should run everytime the stream reader reads a non null line
-            while (musicFreq != null)
+            while (freq != null)
             {
-                freq = musicFreq.ReadLine();
-
                 //This sets up an array with our frequencies in an array and makes it easier to read for the beep function
                 string[] stringNumbers = freq.Split(',');
                 int[] numbers = new int[stringNumbers.Length];
@@ -122,7 +121,7 @@
                         numbers[i] = num;
                     }
                     else
-                        throw new Exception();
+                        Console.WriteLine("Array broke");
 
                 //Sets up the frequencies for the beep function, these variables, will be used for switch statements and math
                 int length = stringNumbers.Length;
@@ -154,30 +153,22 @@
                 //With this we combine multiple notes, since we can only run one beep at any one time
                 int note = frequency1 + frequency2 + frequency3;
 
-                //This just makes sure, that if our frequencies, do not reach the requirement for beeps, it will not try to run it
-                if (length < 37)
-                {
-                    break;
-                }
-                else if (length <= 32767)
+                //This just makes sure, that if our frequencies, do not reach the requirement for beeps, it will not try to run it 
+                if (37 <= note && note <= 32767)
                 {
                     //Beep
                     Console.Beep(note, 250);
-                    break;
                 }
                 else
                 {
-                    break;
+
                 }
+                freq = musicFreq.ReadLine();
             }
         }
         finally
         {
-            //We "Park" or kill this thread, this really isn't optimal
-            while (true)
-            {
-                Thread.Sleep(500000);
-            }
+            //This is where we should end, once the code is done running, maybe the thread will even terminate itself
         }
     }
 }

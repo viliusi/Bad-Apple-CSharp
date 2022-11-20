@@ -32,14 +32,14 @@
         Console.ForegroundColor = ConsoleColor.Black;
         Console.Title = "Bad Apple C#";
         //We start by making a try catch. Why? Because that's what the example online did.
-        string line;
+        string FrameLine;
         try
         {
             //Pass the file path and file name to the StreamReader constructor.
             //Again thank you too Chion82, his project is linked in the ReadME.
             StreamReader frames = new StreamReader(allFrames);
             //We start by reading the first line, again example did so.
-            line = frames.ReadLine();
+            FrameLine = frames.ReadLine();
 
             /*Finally some original code, though it may not be as optimized, we make a boolean called split, 
             if it gets set to true, we get to wait, then clear the screen, which is how we "render" frames. */
@@ -48,29 +48,26 @@
             //Setting up a list, to load the current frame, instead of just writing it from the streamreader
             List<string> currentFrame = new List<string>();
 
-            //Cool while loop, as long as the line we are trying to read is valid, we can continue to render frames.
-            while (line != null)
+            //Cool while loop, as long as the FrameLine we are trying to read is valid, we can continue to render frames.
+            while (FrameLine != null)
             {
-                //The switch case here just checks for if the current line has an SPLIT in it, since SPLIT is what we use to identify where the "frames" split.
-                switch (line)
+                //The switch case here just checks for if the current FrameLine has an SPLIT in it, since SPLIT is what we use to identify where the "frames" split.
+                switch (FrameLine)
                 {
-                    case var containsSplit when line.Contains("SPLIT"):
+                    case var containsSplit when FrameLine.Contains("SPLIT"):
                         split = true;
-                        //This makes it so we can split the line with SPLIT in it, then it looks a bit better :)
-                        line = frames.ReadLine();
-                        line = frames.ReadLine();
+                        //This makes it so we can split the FrameLine with SPLIT in it, then it looks a bit better :)
+                        FrameLine = frames.ReadLine();
                         /* This is where I'd put my code that reads beep frequencies from a txt document and plays them through the beep command,
                         but for some reason microsoft (ew) doesn't support beep with frequencies on linux, which is very not cool, if you ask me */
                         break;
                     default:
                         split = false;
-                        //This is again a code segment from Microsoft, what it does is print our "line" then it jumps to the next one, a bit like a type writer.
-                        currentFrame.Add(line);
-                        line = frames.ReadLine();
+                        //This is again a code segment from Microsoft, what it does is print our "FrameLine" then it jumps to the next one, a bit like a type writer.
+                        currentFrame.Add(FrameLine);
+                        FrameLine = frames.ReadLine();
                         break;
                 }
-                /*And here we again have our split feature, if an S was found, and split was initiated, 
-                then this will let us wait for enough time to emulate a frame, and run the code */
                 switch (split)
                 {
                     case true:
@@ -107,13 +104,13 @@
             String debug = Directory.GetCurrentDirectory();
             String musicLocation = debug.Remove(debug.Length - 17) + "/music.txt";
             StreamReader musicFreq = new StreamReader(musicLocation);
-            string freq = musicFreq.ReadLine();
+            string freqLine = musicFreq.ReadLine();
 
             //This loop should run everytime the stream reader reads a non null line
-            while (freq != null)
+            while (freqLine != null)
             {
                 //This sets up an array with our frequencies in an array and makes it easier to read for the beep function
-                string[] stringNumbers = freq.Split(',');
+                string[] stringNumbers = freqLine.Split(',');
                 int[] numbers = new int[stringNumbers.Length];
                 for (int i = 0; i < stringNumbers.Length; i++)
                     if (int.TryParse(stringNumbers[i], out int num))
@@ -163,7 +160,7 @@
                 {
 
                 }
-                freq = musicFreq.ReadLine();
+                freqLine = musicFreq.ReadLine();
             }
         }
         finally

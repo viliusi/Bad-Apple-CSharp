@@ -1,4 +1,6 @@
-﻿internal class Program
+﻿using NAudio;
+
+internal class Program
 {
     static void Main(string[] args)
     {
@@ -148,13 +150,30 @@
                 //All of this code should be able to be greatly simplefied, but it works for now
 
                 //With this we combine multiple notes, since we can only run one beep at any one time
-                int note = frequency1 + frequency2 + frequency3;
-
+                int note = frequency1 + frequency2 + frequency3 + 800;
+            
                 //This just makes sure, that if our frequencies, do not reach the requirement for beeps, it will not try to run it 
                 if (37 <= note && note <= 32767)
                 {
+                    var sine20Seconds = new SignalGenerator()
+                    {
+                        Gain = 0.2,
+                        Frequency = frequency1,
+                        Type = SignalGeneratorType.Square
+                    }
+                        .Take(TimeSpan.FromSeconds(0.204));
+                    using (var wo = new WaveOutEvent())
+                    {
+                        wo.Init(sine20Seconds);
+                        wo.Play();
+                        while (wo.PlaybackState == PlaybackState.Playing)
+                        {
+                            
+                        }
+                    }
+                    
                     //Beep
-                    Console.Beep(note, 250);
+                    //Console.Beep(note, 204);
                 }
                 else
                 {
@@ -167,5 +186,10 @@
         {
             //This is where we should end, once the code is done running, maybe the thread will even terminate itself
         }
+    }
+    private static SignalGenerator
+    {
+
+
     }
 }

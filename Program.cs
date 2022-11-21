@@ -1,4 +1,4 @@
-using NAudio;
+﻿using NAudio;
 
 internal class Program
 {
@@ -28,37 +28,38 @@ internal class Program
 
         /*We set up a switch case so that you can decide between some different kinds of audio, 
         like if you'd prefer to use NAudio Signal generator, NAudio mp3 or just console beeps. */
-        bool skip = false;
-        while (skip == false)
-        {                
+        bool continu = false;
+        while (continu == false)
+        {
             string audioChoice = Console.ReadLine();
 
             switch (audioChoice)
             {
                 case "1":
                 case "No audio":
-                skip = true;
-                //Don't start beep thread
-                break;
+                    bool audioPreference = false;
+                    continu = true;
+                    //Don't start beep thread
+                    break;
                 case "2":
                 case "NAudio sine":
-                skip = true;
-                //Method start change method to sine
-                break;
+                    continu = true;
+                    //Method start change method to sine
+                    break;
                 case "3":
                 case "NAudio MP3":
-                skip = true;
-                //Method start change method to MP3
-                break;
+                    continu = true;
+                    //Method start change method to MP3
+                    break;
                 case "4":
                 case "Console.Beep":
-                skip = true;
-                //Method start change method to beep
-                break;
+                    continu = true;
+                    //Method start change method to beep
+                    break;
                 default:
-                Console.WriteLine("Invalid, try writing just writing a number, or write the choice you'd like to take");
-                skip = false;
-                break;
+                    Console.WriteLine("Invalid, try writing just writing a number, or write the choice you'd like to take");
+                    continu = false;
+                    break;
             }
         }
         asciiThread.Start();
@@ -121,8 +122,6 @@ internal class Program
                         //This sleeps the process and gets ready to print a new frame, to simulate frametimes
                         Thread.Sleep(50);
                         Console.SetCursorPosition(0, 0);
-                        break;
-                    case false:
                         break;
                     default:
                         break;
@@ -192,30 +191,41 @@ internal class Program
                 //All of this code should be able to be greatly simplefied, but it works for now
 
                 //With this we combine multiple notes, since we can only run one beep at any one time
-                int note = frequency1 + frequency2 + frequency3 + 800;
-            
+                int note = frequency1;
+
                 //This just makes sure, that if our frequencies, do not reach the requirement for beeps, it will not try to run it 
-                if (37 <= note && note <= 32767)
+                if (37 <= frequency1 && frequency1 <= 32767)
                 {
-                    /*var sine20Seconds = new SignalGenerator()
+                    //This code should hopefully let me switch between which kind of audio the user wants to hear, if I could get the variables from main
+                    /*switch (Main(audioPreference))
                     {
-                        Gain = 0.2,
-                        Frequency = frequency1,
-                        Type = SignalGeneratorType.Square
-                    }
-                        .Take(TimeSpan.FromSeconds(0.204));
-                    using (var wo = new WaveOutEvent())
-                    {
-                        wo.Init(sine20Seconds);
-                        wo.Play();
+                        case "MP3":
+                        case "NAudio":
+                        var sine20Seconds = new SignalGenerator()
+                            {
+                            Gain = 0.2,
+                            Frequency = frequency1,
+                            Type = SignalGeneratorType.Square
+                                }
+                                .Take(TimeSpan.FromSeconds(0.204));
+                                using (var wo = new WaveOutEvent())
+                                {
+                            wo.Init(sine20Seconds);
+                            wo.Play();
                         while (wo.PlaybackState == PlaybackState.Playing)
-                        {
-                            
+                            {
+
+                            }
                         }
+                        case "Beep":
+                        Console.Beep(note, 204);
+                        break;
+                        default:
+                            break;
                     }*/
-                    
+
                     //Beep
-                    //Console.Beep(note, 204);
+                    Console.Beep(note, 204);
                 }
                 else
                 {

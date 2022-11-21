@@ -1,4 +1,4 @@
-﻿using NAudio;
+using NAudio;
 
 internal class Program
 {
@@ -14,12 +14,54 @@ internal class Program
         //Another thread for ascii art
         Thread asciiThread = new Thread(ascii);
         asciiThread.Name = "Ascii Art";
-        asciiThread.Start();
 
         /*And we make a second thread, for the beeps, would have set up more threads for beeps, 
         but C# only ever allows you to run one beep at a time, otherwise they start fighting for priority*/
         Thread musicThread = new Thread(beeps);
         musicThread.Name = "Beeps";
+
+        Console.WriteLine(@"Choice what kind of audio you would prefer:
+        1. No audio
+        2. NAudio sine (Intended experience)
+        3. NAudio MP3
+        4. Console.Beep (Windows only)");
+
+        /*We set up a switch case so that you can decide between some different kinds of audio, 
+        like if you'd prefer to use NAudio Signal generator, NAudio mp3 or just console beeps. */
+        bool skip = false;
+        while (skip == false)
+        {                
+            string audioChoice = Console.ReadLine();
+
+            switch (audioChoice)
+            {
+                case "1":
+                case "No audio":
+                skip = true;
+                //Don't start beep thread
+                break;
+                case "2":
+                case "NAudio sine":
+                skip = true;
+                //Method start change method to sine
+                break;
+                case "3":
+                case "NAudio MP3":
+                skip = true;
+                //Method start change method to MP3
+                break;
+                case "4":
+                case "Console.Beep":
+                skip = true;
+                //Method start change method to beep
+                break;
+                default:
+                Console.WriteLine("Invalid, try writing just writing a number, or write the choice you'd like to take");
+                skip = false;
+                break;
+            }
+        }
+        asciiThread.Start();
         musicThread.Start();
     }
     static void ascii()
@@ -155,7 +197,7 @@ internal class Program
                 //This just makes sure, that if our frequencies, do not reach the requirement for beeps, it will not try to run it 
                 if (37 <= note && note <= 32767)
                 {
-                    var sine20Seconds = new SignalGenerator()
+                    /*var sine20Seconds = new SignalGenerator()
                     {
                         Gain = 0.2,
                         Frequency = frequency1,
@@ -170,7 +212,7 @@ internal class Program
                         {
                             
                         }
-                    }
+                    }*/
                     
                     //Beep
                     //Console.Beep(note, 204);

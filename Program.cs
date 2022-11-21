@@ -187,9 +187,4 @@ internal class Program
             //This is where we should end, once the code is done running, maybe the thread will even terminate itself
         }
     }
-    private static SignalGenerator
-    {
-
-
-    }
 }

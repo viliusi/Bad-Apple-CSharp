@@ -1,30 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ivano\\Documents\\CSharp projects\\Bad-Apple-CSharp\\Bad-Apple-CSharp.csproj": {}
+    "C:\\Users\\Vilius\\Documents\\Projects\\Bad-Apple-CSharp\\Bad-Apple-CSharp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ivano\\Documents\\CSharp projects\\Bad-Apple-CSharp\\Bad-Apple-CSharp.csproj": {
+    "C:\\Users\\Vilius\\Documents\\Projects\\Bad-Apple-CSharp\\Bad-Apple-CSharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ivano\\Documents\\CSharp projects\\Bad-Apple-CSharp\\Bad-Apple-CSharp.csproj",
+        "projectUniqueName": "C:\\Users\\Vilius\\Documents\\Projects\\Bad-Apple-CSharp\\Bad-Apple-CSharp.csproj",
         "projectName": "Bad-Apple-CSharp",
-        "projectPath": "C:\\Users\\ivano\\Documents\\CSharp projects\\Bad-Apple-CSharp\\Bad-Apple-CSharp.csproj",
-        "packagesPath": "C:\\Users\\ivano\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ivano\\Documents\\CSharp projects\\Bad-Apple-CSharp\\obj\\",
+        "projectPath": "C:\\Users\\Vilius\\Documents\\Projects\\Bad-Apple-CSharp\\Bad-Apple-CSharp.csproj",
+        "packagesPath": "C:\\Users\\Vilius\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Vilius\\Documents\\Projects\\Bad-Apple-CSharp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ivano\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Vilius\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -35,8 +35,8 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "NAudio": {
               "target": "Package",

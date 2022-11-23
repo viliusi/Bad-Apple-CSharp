@@ -1,15 +1,22 @@
-C:\Users\ivano\Documents\CSharp projects\Bad-Apple-CSharp\bin\Debug\net7.0\Bad-Apple-CSharp.exe
-C:\Users\ivano\Documents\CSharp projects\Bad-Apple-CSharp\bin\Debug\net7.0\Bad-Apple-CSharp.deps.json
-C:\Users\ivano\Documents\CSharp projects\Bad-Apple-CSharp\bin\Debug\net7.0\Bad-Apple-CSharp.runtimeconfig.json
-C:\Users\ivano\Documents\CSharp projects\Bad-Apple-CSharp\bin\Debug\net7.0\Bad-Apple-CSharp.dll
-C:\Users\ivano\Documents\CSharp projects\Bad-Apple-CSharp\bin\Debug\net7.0\Bad-Apple-CSharp.pdb
-C:\Users\ivano\Documents\CSharp projects\Bad-Apple-CSharp\obj\Debug\net7.0\Bad-Apple-CSharp.csproj.AssemblyReference.cache
-C:\Users\ivano\Documents\CSharp projects\Bad-Apple-CSharp\obj\Debug\net7.0\Bad-Apple-CSharp.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\ivano\Documents\CSharp projects\Bad-Apple-CSharp\obj\Debug\net7.0\Bad-Apple-CSharp.AssemblyInfoInputs.cache
-C:\Users\ivano\Documents\CSharp projects\Bad-Apple-CSharp\obj\Debug\net7.0\Bad-Apple-CSharp.AssemblyInfo.cs
-C:\Users\ivano\Documents\CSharp projects\Bad-Apple-CSharp\obj\Debug\net7.0\Bad-Apple-CSharp.csproj.CoreCompileInputs.cache
-C:\Users\ivano\Documents\CSharp projects\Bad-Apple-CSharp\obj\Debug\net7.0\Bad-Apple-CSharp.dll
-C:\Users\ivano\Documents\CSharp projects\Bad-Apple-CSharp\obj\Debug\net7.0\refint\Bad-Apple-CSharp.dll
-C:\Users\ivano\Documents\CSharp projects\Bad-Apple-CSharp\obj\Debug\net7.0\Bad-Apple-CSharp.pdb
-C:\Users\ivano\Documents\CSharp projects\Bad-Apple-CSharp\obj\Debug\net7.0\Bad-Apple-CSharp.genruntimeconfig.cache
-C:\Users\ivano\Documents\CSharp projects\Bad-Apple-CSharp\obj\Debug\net7.0\ref\Bad-Apple-CSharp.dll
+C:\Users\Vilius\Documents\Projects\Bad-Apple-CSharp\bin\Debug\net7.0\Bad-Apple-CSharp.exe
+C:\Users\Vilius\Documents\Projects\Bad-Apple-CSharp\bin\Debug\net7.0\Bad-Apple-CSharp.deps.json
+C:\Users\Vilius\Documents\Projects\Bad-Apple-CSharp\bin\Debug\net7.0\Bad-Apple-CSharp.runtimeconfig.json
+C:\Users\Vilius\Documents\Projects\Bad-Apple-CSharp\bin\Debug\net7.0\Bad-Apple-CSharp.dll
+C:\Users\Vilius\Documents\Projects\Bad-Apple-CSharp\bin\Debug\net7.0\Bad-Apple-CSharp.pdb
+C:\Users\Vilius\Documents\Projects\Bad-Apple-CSharp\bin\Debug\net7.0\NAudio.dll
+C:\Users\Vilius\Documents\Projects\Bad-Apple-CSharp\bin\Debug\net7.0\NAudio.Asio.dll
+C:\Users\Vilius\Documents\Projects\Bad-Apple-CSharp\bin\Debug\net7.0\NAudio.Core.dll
+C:\Users\Vilius\Documents\Projects\Bad-Apple-CSharp\bin\Debug\net7.0\NAudio.Midi.dll
+C:\Users\Vilius\Documents\Projects\Bad-Apple-CSharp\bin\Debug\net7.0\NAudio.Wasapi.dll
+C:\Users\Vilius\Documents\Projects\Bad-Apple-CSharp\bin\Debug\net7.0\NAudio.WinMM.dll
+C:\Users\Vilius\Documents\Projects\Bad-Apple-CSharp\obj\Debug\net7.0\Bad-Apple-CSharp.csproj.AssemblyReference.cache
+C:\Users\Vilius\Documents\Projects\Bad-Apple-CSharp\obj\Debug\net7.0\Bad-Apple-CSharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Vilius\Documents\Projects\Bad-Apple-CSharp\obj\Debug\net7.0\Bad-Apple-CSharp.AssemblyInfoInputs.cache
+C:\Users\Vilius\Documents\Projects\Bad-Apple-CSharp\obj\Debug\net7.0\Bad-Apple-CSharp.AssemblyInfo.cs
+C:\Users\Vilius\Documents\Projects\Bad-Apple-CSharp\obj\Debug\net7.0\Bad-Apple-CSharp.csproj.CoreCompileInputs.cache
+C:\Users\Vilius\Documents\Projects\Bad-Apple-CSharp\obj\Debug\net7.0\Bad-Apple-CSharp.csproj.CopyComplete
+C:\Users\Vilius\Documents\Projects\Bad-Apple-CSharp\obj\Debug\net7.0\Bad-Apple-CSharp.dll
+C:\Users\Vilius\Documents\Projects\Bad-Apple-CSharp\obj\Debug\net7.0\refint\Bad-Apple-CSharp.dll
+C:\Users\Vilius\Documents\Projects\Bad-Apple-CSharp\obj\Debug\net7.0\Bad-Apple-CSharp.pdb
+C:\Users\Vilius\Documents\Projects\Bad-Apple-CSharp\obj\Debug\net7.0\Bad-Apple-CSharp.genruntimeconfig.cache
+C:\Users\Vilius\Documents\Projects\Bad-Apple-CSharp\obj\Debug\net7.0\ref\Bad-Apple-CSharp.dll

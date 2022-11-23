@@ -64,6 +64,9 @@ internal class Program
         }
         asciiThread.Start();
         musicThread.Start();
+
+        Console.Clear();
+        Console.SetCursorPosition(0, 0);
     }
     static void ascii()
     {

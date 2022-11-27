@@ -2,6 +2,11 @@
 
 internal class Program
 {
+    public static class chooseAudio
+    {
+        public static string audioPreference;
+    }
+
     static void Main(string[] args)
     {
         /*The reason I don't just combine the ascii art and beeps into one thread, is because then I'd have to sync, the music and visuals in the code
@@ -37,22 +42,25 @@ internal class Program
             {
                 case "1":
                 case "No audio":
-                    bool audioPreference = false;
+                    chooseAudio.audioPreference = "No audio";
                     continu = true;
                     //Don't start beep thread
                     break;
                 case "2":
                 case "NAudio sine":
+                    chooseAudio.audioPreference = "NAudio sine";
                     continu = true;
                     //Method start change method to sine
                     break;
                 case "3":
                 case "NAudio MP3":
+                    chooseAudio.audioPreference = "NAudio MP3";
                     continu = true;
                     //Method start change method to MP3
                     break;
                 case "4":
                 case "Console.Beep":
+                    chooseAudio.audioPreference = "Console.Beep";
                     continu = true;
                     //Method start change method to beep
                     break;
@@ -196,15 +204,18 @@ internal class Program
                 //With this we combine multiple notes, since we can only run one beep at any one time
                 int note = frequency1;
 
+                string prevChoice = chooseAudio.audioPreference;
+
                 //This just makes sure, that if our frequencies, do not reach the requirement for beeps, it will not try to run it 
                 if (37 <= frequency1 && frequency1 <= 32767)
                 {
                     //This code should hopefully let me switch between which kind of audio the user wants to hear, if I could get the variables from main
-                    /*switch (Main(audioPreference))
+                    switch (Main(prevChoice))
                     {
                         case "MP3":
+                        // Naudio MP3 function go here
                         case "NAudio":
-                        var sine20Seconds = new SignalGenerator()
+                        /*var sine20Seconds = new SignalGenerator()
                             {
                             Gain = 0.2,
                             Frequency = frequency1,
@@ -219,15 +230,16 @@ internal class Program
                             {
 
                             }
-                        }
+                        }*/
                         case "Beep":
+                        // Good old Beep
                         Console.Beep(note, 204);
                         break;
                         default:
                             break;
-                    }*/
+                    }
 
-                    //Beep
+                    // Backup Beep for while i get the switch to work
                     Console.Beep(note, 204);
                 }
                 else

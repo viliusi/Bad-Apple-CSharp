@@ -210,37 +210,40 @@ internal class Program
                 if (37 <= frequency1 && frequency1 <= 32767)
                 {
                     //This code should hopefully let me switch between which kind of audio the user wants to hear, if I could get the variables from main
-                    switch (Main(prevChoice))
+                    switch (prevChoice)
                     {
-                        case "MP3":
-                        // Naudio MP3 function go here
-                        case "NAudio":
-                        /*var sine20Seconds = new SignalGenerator()
-                            {
-                            Gain = 0.2,
-                            Frequency = frequency1,
-                            Type = SignalGeneratorType.Square
-                                }
-                                .Take(TimeSpan.FromSeconds(0.204));
-                                using (var wo = new WaveOutEvent())
+                        case "No audio":
+                            // Oh wow, look, it's nothing
+                            break;
+                        case "NAudio sine":
+                            // I still need to make this work, too bad NAudio is a bit hard
+                            /*var sine20Seconds = new SignalGenerator()
                                 {
-                            wo.Init(sine20Seconds);
-                            wo.Play();
-                        while (wo.PlaybackState == PlaybackState.Playing)
-                            {
+                                Gain = 0.2,
+                                Frequency = frequency1,
+                                Type = SignalGeneratorType.Square
+                                    }
+                                    .Take(TimeSpan.FromSeconds(0.204));
+                                    using (var wo = new WaveOutEvent())
+                                    {
+                                wo.Init(sine20Seconds);
+                                wo.Play();
+                            while (wo.PlaybackState == PlaybackState.Playing)
+                                {
 
-                            }
-                        }*/
-                        case "Beep":
-                        // Good old Beep
-                        Console.Beep(note, 204);
-                        break;
+                                }
+                            }*/
+                            break;
+                        case "NAudio MP3":
+                            // You'll have to imagine this being a working script
+                            break;
+                        case "Console.Beep":
+                            // Good old Beep
+                            Console.Beep(note, 204);
+                            break;
                         default:
                             break;
                     }
-
-                    // Backup Beep for while i get the switch to work
-                    Console.Beep(note, 204);
                 }
                 else
                 {

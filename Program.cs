@@ -204,13 +204,11 @@ internal class Program
                 //With this we combine multiple notes, since we can only run one beep at any one time
                 int note = frequency1;
 
-                string prevChoice = chooseAudio.audioPreference;
-
                 //This just makes sure, that if our frequencies, do not reach the requirement for beeps, it will not try to run it 
                 if (37 <= frequency1 && frequency1 <= 32767)
                 {
                     //This code should hopefully let me switch between which kind of audio the user wants to hear, if I could get the variables from main
-                    switch (prevChoice)
+                    switch (chooseAudio.audioPreference)
                     {
                         case "No audio":
                             // Oh wow, look, it's nothing

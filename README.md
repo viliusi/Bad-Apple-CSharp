@@ -21,4 +21,4 @@ Also thanks to Chion82 and his project with doing this in Python, I made good us
 4. Chart explaining how far removed from reality this project is, from my point of view. (Shows the use of python, midi files, midi converters and multiple threads of music)
 5. Setup .Gitignore
 6. Setup and fix NAudio sine square sound generator
-7. Find out how to share a variable from main, down to the threads
+7. Implement part of the song that wasn't included in the midi, but is part of the video
